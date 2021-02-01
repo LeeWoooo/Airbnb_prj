@@ -1,0 +1,253 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; 
+    /*기본적으로 contnet의 영역을 가지고 width값과 height값을 설정한다
+    하지만 그렇게 된다면 내가 원하는 넓이값과 높이값을 부여해도 적용되지 않는 경우가 생긴다.
+    그렇기 때문에 box-siging의 속성값을 border-box를 부여하여 content의 영역이 아닌 box단위로 
+    넓이와 높이를 부여하기 위한것이다.
+    */
+}
+
+header {
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    height: 1020px;
+}
+
+nav {
+    display: grid; /*nav안에서 가로배치 하기 위해서 사용한다. 가장 최근에 나온 레이아웃*/
+    grid-template-columns: auto auto; /*안에 2개의 자식 노드가 있고 그 두 노드가 각각 같은 비율료 영역을 차지*/
+    justify-content: space-between; /*2개의 요소 사에에 영역을 확보한다.*/
+}
+
+.logo {
+    margin: 10px 0 0 20px;
+    color: #fff;
+}
+
+.menu ul {
+    margin: 20px 20px 0 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+    list-style-type: none; /*불릿 표시 지우기*/
+}
+
+.menu ul a {
+    text-decoration: none; /*글자 속성에서 기본 타입으로 설정 a태그는 글자속성중 밑줄이 적용되어있다.*/
+    color: #fff;
+    font-weight: 800;
+}
+
+.search__box{
+    width: 430px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 20px 30px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px grey;
+}
+
+.search__title{
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #333030;
+}
+
+table {
+    width: 100%;
+}
+
+.search__sub__title{
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.search__input{
+    height: 45px;
+    width: 100%;
+    color: #333030;
+    font-size: 15px;
+    border: 1px solid #d1cccc;
+    border-radius: 5px;
+}
+
+.search__button {
+    display: grid;
+    justify-content: end; /*자신의 영역중에 위치를 조정할 수 있다.*/
+    padding: 20px 0;
+}
+
+.search__button button{
+    background-color: #FF385c;
+    color: #fff;
+    width: 70px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    border: 0; /*border를 사라지게 하기위해 값을 0*/
+    cursor: pointer; /*버튼의 속성을 주면 포인터가 사리지기 때문에 따로 부여해야한다.*/
+}
+
+main {
+    margin: 30px 80px; /*세로 가로 순으로*/
+}
+
+section {
+    margin: 30px 0;
+}
+
+.sec__title {
+    font-size: 25px;
+    font-weight: 800;
+    color: #333030;
+}
+
+.card__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+
+.card__img{
+    background-image: url(../images/card1.jpg);
+    height: 70px;
+    background-size: 100% 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 1px solid #d1cccc;
+    border-radius: 6px;
+    box-shadow: 0 3px 3px 0 #333030;
+}
+
+.card__content{
+    display: grid;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.ad1 {
+    background-image: url(../images/ad1.jpg);
+    height: 350px;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+
+.choo__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+
+.choo__img1{
+    background-image: url(../images/choo1.png);
+}
+
+.choo__img2{
+    background-image: url(../images/choo2.png);
+}
+
+.choo__img3{
+    background-image: url(../images/choo3.png);  
+}
+
+.choo__img4{
+    background-image: url(../images/choo4.png);
+}
+
+.choo__img5{
+    background-image: url(../images/choo5.png);
+}
+
+.choo__img1,.choo__img2,.choo__img3,.choo__img4,.choo__img5{
+    height: 250px;
+    background-size: 100% 100%;
+    border-radius: 5px;
+}
+
+.ad2 {
+    background-image: url(../images/ad2.png);
+    height: 300px;
+    background-size: 100% 100%;
+    border-radius: 20px; 
+    margin-top: 20px;
+}
+
+.home__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.home__img1 {
+    background-image: url(../images/home1.png);
+}
+
+.home__img2 {
+    background-image: url(../images/home2.png);
+}
+.home__img3 {
+    background-image: url(../images/home3.png);
+}
+.home__img4 {
+    background-image: url(../images/home4.png);
+}
+.home__img5 {
+    background-image: url(../images/home5.png);
+}
+.home__img6 {
+    background-image: url(../images/home6.png);
+}
+.home__img7 {
+    background-image: url(../images/home7.png);
+}
+.home__img8 {
+    background-image: url(../images/home8.png);
+}
+
+.home__img1,.home__img2,.home__img3,.home__img4,.home__img5,.home__img6,.home__img7,.home__img8{
+        height: 180px;
+    background-size: 100% 100%;
+    border-radius: 6px;
+}
+
+.info1 {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #333030;
+}
+
+.info2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #292727;
+}
+
+.star {
+    font-size: 12px;
+    color: #0b490b;
+    font-weight: 800;
+}
+
+.count, .type {
+    font-size: 12px;
+}
+
+.home__img2 img {
+    position: absolute; top: 0; left: -;
+}
